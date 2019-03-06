@@ -1,0 +1,8 @@
+Permitir a comunicação efetiva entre cada cliente e os prestadores de cada um de seus respectivos serviços demandados:
+- Contratar o serviço desejado pelo cliente;
+- Contratar o prestador adequado a este serviço;
+- Planejar o fornecimento desse serviço;
+- Fornecer o serviço, monitorando-o até a finalização do processo e podendo cancelá-lo ou não antes de sua entrega;
+- Acertar contas entre cliente e prestador;
+- Emitir e fornecer nota fiscal para o cliente;
+- Oferecer plataforma para avalição do serviço/prestador por parte do cliente e do cliente por parte do prestador.
