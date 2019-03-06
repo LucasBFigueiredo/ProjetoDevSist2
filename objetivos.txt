@@ -1,0 +1,3 @@
+- Oferecer uma solucão de software para a realização de e-services.
+- Integrar entidades clientes, prestadores de serviços, agenciadores e gerentes na solução ofertada.
+- Garantir que essa integração siga um processo de negócios previamente definido.
