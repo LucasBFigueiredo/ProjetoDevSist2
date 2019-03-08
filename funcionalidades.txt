@@ -5,4 +5,4 @@ Permitir a comunicação efetiva entre cada cliente e os prestadores de cada um 
 - Fornecer o serviço, monitorando-o até a finalização do processo e podendo cancelá-lo ou não antes de sua entrega;
 - Acertar contas entre cliente e prestador;
 - Emitir e fornecer nota fiscal para o cliente;
-- Oferecer plataforma para avalição do serviço por parte do cliente.
+- Oferecer plataforma para avalição do serviço por parte do cliente e da gestão por parte do prestador.
