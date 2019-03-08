@@ -1,4 +1,5 @@
 Permitir a comunicação efetiva entre cada cliente e os prestadores de cada um de seus respectivos serviços demandados:
+- Realizar cadastro cliente/prestador;
 - Contratar o serviço desejado pelo cliente;
 - Contratar o prestador adequado a este serviço;
 - Planejar o fornecimento desse serviço;
