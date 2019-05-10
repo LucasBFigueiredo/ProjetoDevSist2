@@ -1,0 +1,103 @@
+INSTRUTUTOR
+- Fazer cadastro:
+*Escopo: Plataforma de Venda de Aulas
+*Nível: Objetivo de usuário
+*Ator Principal: Instrutor
+*Interessados e Interesses: 
+Intrutor: Deseja ser capaz de se cadastrar na plataforma de maneira rápida e fácil para, com ele, conseguir vender suas aulas particulares para um público mais abrangente.
+Empresa: Deseja conseguir cada vez mais colaboradores em sua plataforma, porém evitando cadastros duplicados (um mesmo instrutor não deve ser capaz de criar múltiplas contas).
+*Pré-Condições: 
+???????????????
+*Pós-Condições: 
+Instrutor deve ter inserido todos os seus dados e, após clicar no link de validação enviado por E-Mail, sua conta deve ter sido validado.
+*Fluxo Principal: 
+    1.	Instrutor digita CPF/CNPJ e envia para verificação.
+    2.	Plataforma valida e exibe formulário de cadastro.
+    3.	Instrutor preenche formulário com nome, E-Mail, data de nascimento, etc. e submete.
+    4.	 Plataforma valida dados do formulário e exibe termo de compromisso.
+    5.	Instrutor aceita termos de compromisso e submete.
+    6.	Plataforma valida aceite.
+    7.	Plataforma envia E-Mail do instrutor para Sistema de Validação de E-Mail e solicita sua validação.
+    8.	Sistema de Validação de E-Mail envia link de validação para o E-Mail do instrutor.
+    9.	Plataforma exibe mensagem de aviso para o instrutor acessar o E-Mail contendo o link dentro do prazo de 2 dias.
+    10.	Instrutor acessa seu E-Mail e clica no link de validação.
+    11.	Sistema de Validação de E-Mail valida o E-Mail do instrutor e envia informação à Plataforma de venda de aulas.
+    12.	Plataforma exibe mensagem de cadastro efetuado com sucesso e libera acesso ao instrutor.
+*Fluxos Alternativos:
+    2.a Plataforma verifica que o CPF/CNPJ inseridos já possuem cadastro
+        1.	Plataforma exibe informe com a mensagem "CPF/CNPJ já foi utilizado!"
+        2.	Plataforma retorna para o estado de "inserir CPF/CNPJ"
+    2.b Plataforma verifica que o CPF/CNPJ não é válido
+        1.	Plataforma exibe informe com a mensagem "CPF/CNPJ inválido!"
+        2.	Plataforma retorna para o estado de "inserir CPF/CNPJ"
+    4.a Plataforma verifica dados inseridos inválidos 
+        1.	Plataforma exibe informe com a mensagem "[respectivo dado] inválido!"
+        2.	Plataforma retorna para o estado de "inserir dados de cadastro"
+    5.a Instrutor não aceita termos de compromisso
+       1.	Plataforma permanece no estado atual até que o instrutor aceite os termos
+    7.a Sistema de Validação de E-Mail verifica que o E-Mail é inválido
+       1.	Sistema de Validação de E-Mail retorna excessão para a Plataforma de vendas de aula
+       2.	Plataforma exibe informe com a mensagem "E-Mail inválido!"
+       3.	Plataforma retorna para o estado de "inserir dados de cadastro"
+    10.a Instrutor não clica no link de validação dentro do prazo de 2 dias
+       1.	Sistema de Validação de E-Mail retorna excessão para a Plataforma de vendas de aula
+       2.	Plataforma cancela o cadastro do instrutor
+*Requisitos Especias:
+O instrutor deve ser capaz de se cadastrar em menos de 30 minutos.
+A plataforma deve ser capaz de liberar o acesso ao instrutor em até 15 minutos.
+
+- Cadastrar assuntos a lecionar lecionar;
+
+- Elaborar orçamento
+*Escopo: Plataforma de Venda de Aulas
+*Nível: Objetivo de usuário
+*Ator Principal: Instrutor
+*Interessados e Interesses:
+Instrutor: Deseja receber um prazo da plataforma para conseguir desenvolver uma proposta de orçamento.
+Cliente:  Deseja receber o orçamento dentro de um curto prazo.
+*Pré-Condições:
+Um cliente, com seu cadastro atualizado, deve ter Solicitado um Orçamento, contendo quais aulas são solicitadas, e suas respectivas quantidades, a data e o local de encontro.
+A plataforma deve ter lhe enviado o pedido junto ao prazo limite para elaborar a proposta;
+O instrutor deve estar com o cadastro atualizado.
+*Pós-Condições:
+A proposta de orçamento deve incluir todas as aulas solicitadas e os preços finais de cada uma, além do preço total.
+A plataforma deve ter recebido a proposta para encaminhá-la ao cliente.
+*Fluxo Principal:
+    1.	Plataforma envia requisição de orçamento contendo um prazo limite.
+    2.	Instrututor clica na requisição "Fazer Orçamento".
+    3.	Plataforma exibe detalhes do pedido do cliente.
+    4.	Instrutor insere custos para cada aula solicitada.
+    5.	Plataforma valida e realiza cálculo do preço total.
+    6.	Instrutor efetiva proposta e submete.
+*Fluxos Alternativos:
+    2.a Instrutor não clica na requisição dentro do prazo estipulado:
+       1.	Plataforma atualiza requisição para "cancelado devido ao prazo excedido"
+    5.a Plataforma detecta que o instrutor não inseriu um valor de custo válido
+       1.	Plataforma exibe informe com a mensagem "valor de custo inválido!"
+       2.	Plataforma retorna para o estado de "inserir valores de custo"
+    6.a Instrutor não efetiva a proposta
+       1.	Plataforma descarta a proposta em elaboração
+*Requisitos Especias:
+ O instrutor deve ser capaz de elaborar a proposta de orçamento em menos de 10 minutos.
+
+CLIENTE
+- Fazer cadastro:
+*Escopo: Plataforma de Venda de Aulas
+*Nível: Objetivo de usuário
+*Ator Principal: Cliente
+*Interessados e Interesses:
+Cliente: Deseja conseguir fazer cadastro de forma rápida e fácil, para facilitar a compra de aulas particulares e, uma vez estando na plataforma, possuir um catálogo mais variado de aulas.
+Empresa: Deseja conseguir cada vez mais clientes em sua plataforma e ofertá-los mais opções de aulas, porém evitando cadastros duplicados (um mesmo cliente não deve ser capaz de criar múltiplas contas).
+*Pré-Condições:
+???????????????
+*Pós-Condições:
+O cliente deve ter inserido todos os seus dados e, após clicar no link de validação enviado por E-Mail, sua conta deve ter sido validado.
+*Fluxo Principal:
+*Fluxos Alternativos:
+*Requisitos Especias:
+
+- Solicitar orçamento;
+
+- Abrir pedido de compra;
+
+- Fazer pagamento;
